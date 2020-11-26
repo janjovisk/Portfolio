@@ -1,0 +1,296 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: #a914ff;
+
+}
+
+html, body, main {
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('../fonts/segoeui.eot');
+    src: url('../fonts/segoeui.eot?#iefix') format('embedded-opentype'), url('../fonts/segoeui.ttf') format('truetype'), url('../fonts/segoeui.svg#TheSansCorrespondence') format('svg');
+}
+
+main {
+    font-family: 'Segoe UI', 'Trebuchet MS';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( #663cb4 20%, #a914ff 50%);
+    background-attachment: fixed;
+}
+
+h2{
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.area_logo{
+    position: absolute;
+    right: 0px;
+}
+
+.barra_topo,
+.itens_menu {
+    height: 120px;
+}
+
+.barra_topo ul li a{
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.barra_topo ul li a:hover,
+.barra_topo ul li a:active {
+    text-decoration: none;
+    color: #6fe2ff;
+    background: RGBA(255, 255, 255, 0.15);
+    border-radius: 6px;
+    transform: scale(0.95);
+}
+
+.menuzinho:focus{
+    border: 0 none;
+    outline: 0;
+    background: RGBA(255, 255, 255, 0.2);
+}
+
+.menuzinho{
+    position: absolute;
+    z-index: 10;
+}
+
+.banner_titulo {
+    height: 280px;
+}
+
+.banner_titulo::before {
+    border-top: 3px solid #4a004d;
+    height: 280px;
+    content: '';
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    background: url(../imagens/BG_dia_dos_pais.png) repeat-x center center;
+}
+
+#menu_mobile,
+label[for=menu_mobile] {
+    display: none;
+}
+
+.dia_pais_logo {
+    height: 280px;
+    background-image: radial-gradient( RGBA(255, 255, 255, 0.4), RGBA(255, 255, 255, 0) 70%);
+}
+
+.dia_pais_img {
+    margin-top: -120px;
+}
+
+.desktop_view img{
+    width: 100%;
+    max-width: 1110px;
+}
+
+.carousel-control-prev{
+    background-image: linear-gradient( 90deg, RGBA(255, 255, 255, 0.4), RGBA(255, 255, 255, 0) 70%);
+}
+
+.carousel-control-next{
+    background-image: linear-gradient( 270deg, RGBA(255, 255, 255, 0.4), RGBA(255, 255, 255, 0) 70%);
+}
+.mobile_view img{
+    width: 100%;
+    max-width: 690px;
+}
+
+.carousel-indicators {
+    bottom: -56px;
+}
+
+.carousel-indicators li {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    box-shadow: inset 0px 0px 3px 3px#ff1fe2;
+}
+
+
+.prod_destaque a img{
+    transition: all 0.2s ease-in;
+    max-width: 350px;
+}
+
+.prod_destaque a img:hover{
+    transform: scale(1.05);
+
+}
+
+.Lista_produtos a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.Lista_produtos .valor{
+    color: #4a004d;
+}
+
+.preco{
+    font-size: 1.6rem;
+    font-weight: bold;
+    
+}
+
+.preco_descript, .btn_comprar{
+    font-size: 0.8rem;
+}
+
+.btn_comprar{
+    height: 38px;
+    margin-left: -20px;
+    color: #ffffff !important;
+}
+
+.btn_comprar:hover, .btn_comprar:active{
+    transform: scale(1.05);
+}
+
+.mobile_view{
+    display: none;
+}
+
+@media screen and (max-width: 992px){
+    
+    .desktop_view{
+        display: none;
+    }
+
+    .mobile_view{
+        display: block;
+    }
+    
+    .menu_list{
+        margin-top: 120px;
+        z-index: 10;
+        background: #663cb4;
+        border-radius: 16px;
+    }
+
+    .barra_topo ul li{
+        background: RGBA(255, 255, 255, 0.1);
+        border-radius: 6px;
+        margin: 4px;
+    }
+
+    .barra_topo ul li a:hover,
+    .barra_topo ul li a:active {
+        background: none;
+
+    }
+}
+  
+  @media screen and (max-width: 767px) {
+
+
+    .banner_titulo {
+        height: 520px;
+    }
+
+    .banner_titulo::before {
+        height: 520px;
+        background-size: cover;
+    }
+
+    .dia_pais_logo {
+        height: 510px;
+        background-position: center -70px;
+        background-image: radial-gradient( RGBA(255, 255, 255, 0.4), RGBA(255, 255, 255, 0) 50%);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .dia_pais_logo img{
+        margin-top: 50px !important;
+        position: absolute;
+        left: 0px;
+        
+    }
+
+    .dia_pais_img{
+        height: 517px;
+        margin-top: auto;
+        position: absolute;
+        right: -150px;
+        bottom: -10px;
+    }
+   
+       
+
+}
+
+@media screen and (max-width: 520px) {
+
+    .dia_pais_logo img{
+        margin-top: 100px !important;
+        left: 0px;
+        width: 80%;
+        
+    }
+
+    .dia_pais_img{
+        right: -200px;
+    }
+   
+       
+
+}
+
+@media screen and (max-width: 330px) {
+
+    .dia_pais_logo img{
+        width: 76%;
+        
+    }
+
+    .dia_pais_img{
+        right: -220px;
+    }
+   
+    .menuzinho{
+        margin-left: -25px;
+        padding: -10px !important;
+    }   
+
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px){
+    .area_logo{
+       margin-right: -100px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1199px){
+    .btn_comprar{
+        font-size: 0.7rem !important;
+    } 
+}
