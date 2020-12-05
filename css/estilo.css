@@ -509,6 +509,11 @@ a:hover{ color: #fd2136;}
 }
 
 @media screen and (max-width:575px){
+  .banner_area {
+    background: url(../imagens/Fundo_banner.png) no-repeat right bottom;
+    background-size: 160% 55%;
+  }
+
   .banner_area .dentro_slider{
     width: 70.55%;
     font-size: 1em !important;
@@ -662,7 +667,7 @@ a:hover{ color: #fd2136;}
 .barra_skill span{
   position: absolute;
   left: 16px;
-  top: 4px;
+  top: 5px;
   z-index: 2;
   color: #000000;
   font-weight: 800;
@@ -1090,10 +1095,19 @@ right: 10px;
 }
 
 .gallery a img{
-  transform: scale(1) !important;
   margin: 6px 10px;
-	transition: all ease-in 0.1s;
+  transition: all ease-in 0.1s;
 
+}
+
+@media screen and (max-width:575px){
+
+  .gallery a img{
+    width: 100%;
+    max-width: 150px;
+
+  
+  }
 }
 
 .gallery a img:hover{
@@ -1157,23 +1171,6 @@ right: 10px;
   transition: 0.3s;
   background: #ffffff;
   box-shadow: inset 0px 5px 5px #0000002b;
-}
-
-@media screen and (max-width:380px){
-  .gallery a.big img{
-    max-width: 260px;
-  }
-
-  .gallery a img {
-    max-width: 160px;
-  }
-}
-
-@media screen and (max-width:320px){
-  .gallery a.big img{
-    max-width: 230px;
-    margin-left: -8px;
-  }
 }
 
 /* --------------------------------------------   */
@@ -1240,3 +1237,8 @@ right: 10px;
   margin-left: -60px !important;
 }
 
+@media screen and (max-width:475px){
+  .fixed .navbar-toggler{
+    margin-left: -100px !important;
+  }
+}
