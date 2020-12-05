@@ -50,6 +50,15 @@ html, body {
     background: url(../imagens/wall.jpg) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
+
+      -webkit-touch-callout: none;  /* iPhone OS, Safari */
+      -webkit-user-select: none;    /* Chrome, Safari 3 */
+      -khtml-user-select: none;     /* Safari 2 */
+      -moz-user-select: none;       /* Firefox */
+      -ms-user-select: none;        /* IE10+ */
+      user-select: none;            /* Possível implementação no futuro */
+      /* cursor: default; */
+  
   }
 
 h1{
@@ -1125,13 +1134,15 @@ right: 10px;
 
 }
 
-@media screen and (max-width:575px){
+@media screen and (max-width:580px){
 
   .gallery a img{
     width: 100%;
-    max-width: 150px;
+    max-width: 150px; 
+  }
 
-  
+  .videos_area a img{
+    width: auto;
   }
 }
 
