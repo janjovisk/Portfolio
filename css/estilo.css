@@ -181,16 +181,37 @@ a:hover{ color: #fd2136;}
 
 /* -------------   Cabeçalho Responsivo  ------------------- */
 
-@media screen and (max-height:668px){
+
+@media screen and (max-height:677px) and (max-width:991px){
   .header_home{
-    background: url(../imagens/top1.png) no-repeat center -70px;
+    background: url(../imagens/top1.png) no-repeat center -120px;
   }
-  .header_home .logo{
-    top: 50px;
+  .header_home .logo {
+    width: 80px !important;
+    top: 30px;
   }
-  .header_home .area_titulo{
-    margin-top: 120px;
+  .header_home .area_titulo {
+    margin-top: 40px !important;
   }
+
+  .aviso_home {
+    background: url(../imagens/alert_home.png) no-repeat left top;
+    background-size: auto 30% !important;
+
+  }
+
+  .aviso_home p{
+    background: #ffffff;
+    padding: 1.5em;
+    border-radius: 16px;
+    box-shadow: 0px 5px 5px #0000002b;
+
+  }
+
+}
+
+@media screen and (min-height:678px){
+  
 }
 
 @media screen and (max-width:1199px){
@@ -208,8 +229,8 @@ a:hover{ color: #fd2136;}
 
   .aviso_home{
     background: url(../imagens/alert_home.png) no-repeat left top;
-    background-size: auto 80%;
-    font-size: 1.1em;
+    background-size: auto 60%;
+    font-size: 0.8em;
   }
 }
 
@@ -222,7 +243,6 @@ a:hover{ color: #fd2136;}
   .navbar{
     width: 50px !important;
   }
-
 
   .navbar-toggler{
     left: 0px;
@@ -290,18 +310,14 @@ a:hover{ color: #fd2136;}
     top: 40px;
   }
 
-  .aviso_home{
-    background: url(../imagens/alert_home.png) no-repeat left top;
-    background-size: auto 100px;
-    font-size: 1em;
-  }
+
 }
 
 @media screen and (min-width:768px) and (max-width:870px){
   .aviso_home{
     background: url(../imagens/alert_home.png) no-repeat left top;
-    background-size: auto 70%;
-    font-size: 0.9em;
+    background-size: auto 45%;
+
   }
 }
 
