@@ -546,7 +546,7 @@ a:hover{ color: #fd2136;}
 @media screen and (max-width: 375px){
   .banner_area {
       background: url(../imagens/Fundo_banner.png) no-repeat right bottom;
-      background-size: 130% 55%;
+      background-size: 130% 65%;
   }
   .banner_area .dentro_slider{
     width: 78.55%;
@@ -613,7 +613,7 @@ a:hover{ color: #fd2136;}
   left: 4px;
   top: 4px;
   z-index: 1;
-  height: 25px;
+  height: 26px;
   border-radius: 16px 3px 3px 16px;
   background: #bfbfbf;
 
