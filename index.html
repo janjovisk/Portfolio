@@ -1,896 +1,648 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no," />
 
-  <meta name="viewport" content="width=device-width, initial-scale=0.60, maximum-scale=0.60, user-scalable=no," />
-
-  <meta name="description"
-    content="Portifólio Profissional de Ricardo P. Minaya - Designer de Interface Digital UX/UI/Front-End" />
-
-  <!-- Facebook Meta -->
-  <meta property="og:url" content="https://janjovisk.github.io/Portfolio/index.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Portfólio Minaya" />
-  <meta property="og:description"
-    content="Portifólio Profissional de Ricardo P. Minaya - Designer de Interface Digital UX/UI/Front-End" />
-  <meta property="og:image" content="https://janjovisk.github.io/Portfolio/images/avatar.png" />
+    <!-- Facebook Meta -->
+    <meta property="og:url" content="https://janjovisk.github.io/Portfolio/index.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Portfólio Minaya" />
+    <meta property="og:description" content="Portfólio Profissional de Ricardo P. Minaya - Designer UI/UX/Front-End" />
+    <meta property="og:image" content="https://janjovisk.github.io/Portfolio/images/avatar.png" />
 
 
-  <title>Portfólio Minaya</title>
-  <link rel="icon" type="imagem/png" href="images/avatar.png" />
+    <title>..:: Minaya Designer ::..</title>
+    <link rel="icon" type="imagem/png" href="imagens/avatar.png" />
 
-  <!-- Bootstrap -->
-  <link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
-  <!-- Iconografia -->
-  <!-- Font awesome web  -->
-  <!--<script src="https://kit.fontawesome.com/cc57e00b31.js" crossorigin="anonymous"></script>-->
-  <link href="fontawesome/css/all.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom -->
+    <link href="css/estilo.css" rel="stylesheet">
 
-  <!-- Depoimentos  -->
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
-  <!-- css custom -->
-  <link href="css/custom_style.css" rel="stylesheet">
+    <!-- light box -->
+    <link href="dist/simplelightbox.min.css" rel='stylesheet' type='text/css'>
 
-  <!-- Animate -->
-  <link rel="stylesheet" href="css/animate.css">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
-  <script src="js/wow.min.js"></script>
-  <script>
-    new WOW().init();
-  </script>
+    <!-- Animate -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 
 </head>
 
-
 <body>
 
-  <div class="modal fade" id="modal_view" tabindex="-1" role="dialog" aria-labelledby="modal_viewTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered tamanho_modal_img" role="document">
-      <div class="modal-content w-200">
-        <div class="modal-header" data-dismiss="modal" aria-label="Close">
-          <h5 class="modal-title" id="modal_viewTitle">Trabalho Recente</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body" data-dismiss="modal" aria-label="Close">
+    <section class="meio">
+        <header class="header_home container-fluid">
+            <div class="area_conteudo">
 
-          <img src="Projetos/Galeria_imgs/Ilustracao/connectcom_1.jpg" class="w-100" id="new_1" />
+                <img src="imagens/MD_logo.png" class="logo" />
 
-          <img src="Projetos/Galeria_imgs/Ilustracao/She-Ha.png" class="w-100" id="new_2" />
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-        </div>
-        <!--div class="modal-footer">
-          
-        </div -->
-      </div>
-    </div>
-  </div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active wow fadeIn" -wow-duration="1s" data-wow-delay="0.3s">
+                                <a class="nav-link disabled" href="index.html">Principal</a>
+                            </li>
+                            <li class="nav-item wow fadeIn" -wow-duration="1s" data-wow-delay="0.6s">
+                                <a class="nav-link" href="historico.html">Histórico</a>
+                            </li>
+                            <li class="nav-item wow fadeIn" -wow-duration="1s" data-wow-delay="0.9s">
+                                <a class="nav-link" href="trabalhos.html">Trabalhos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
 
-  <div class="container">
-    <div class="row">
-      <nav class="position-fixed h-100 col-md-2 d-none d-lg-block sidebar">
-        <div class="row">
-          <div class="col-10 menu_cor">
-            <ul class="nav flex-column pt-3">
-              <li class="nav-item text-center py-2 bg-dark wow bounceIn" -wow-duration="1s" data-wow-delay="0s"
-                id="link01">
-                <a href="index.html" class="nav-link">Sobre</a>
-              </li>
+                <div class="row area_titulo d-flex align-items-end">
+                    <div class="col-md-6 order-md-1 order-2  wow fadeIn" -wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="row aviso_home">
+                            <div class="col offset-3">
+                                <p>Este site tem como objetivo
+                                    contar sobre o meu histórico
+                                    profissional, assim como
+                                    demonstrar exemplos de alguns
+                                    de meus melhores trabalhos
+                                    dentro de cada seguimento
+                                    de criação.</p>
+                            </div>
+                        </div>
+                    </div>
 
-              <li class="nav-item text-center py-2 wow fadeIn" -wow-duration="1s" data-wow-delay="0.3s" id="link02">
-                <a href="historico.html" class="nav-link">Histórico</a>
-              </li>
+                    <div class="col-md-6 order-md-2 order-1 mb-5 mb-md-auto text-center  wow fadeIn" -wow-duration="1s"
+                        data-wow-delay="0.5s">
+                        <img src="imagens/avatar.png" class="avatar">
+                        <h1 class="mt-5 mb-3">Ricardo P. Minaya</h1>
+                        <h4>
+                            Designer de Interface Digital <br />
+                            UI/UX/Front-End
+                        </h4>
+                    </div>
+                </div>
 
-              <li class="nav-item text-center py-2 wow fadeIn" -wow-duration="1s" data-wow-delay="0.6s" id="link03">
-                <a href="projetos.html" class="nav-link">Projetos</a>
-              </li>
-
-              <li class="nav-item text-center py-2 wow fadeIn" -wow-duration="1s" data-wow-delay="0.9s" id="link04">
-                <a href="galeria.html" class="nav-link">Galeria</a>
-              </li>
-
-              <li class="nav-item text-center py-2 wow fadeIn" -wow-duration="1s" data-wow-delay="1.2s" id="link05">
-                <a href="contato.html" class="nav-link">Contato</a>
-              </li>
-
-            </ul>
-            <div class="text-center mt-5">
-              <i class="far fa-id-badge fa-inverse wow fadeInUp" -wow-duration="1s" data-wow-delay="1.5s" id="img01"
-                style="display:block"></i>
-              <i class="fas fa-history fa-inverse" id="img02"></i>
-              <i class="fas fa-briefcase fa-inverse" id="img03"></i>
-              <i class="far fa-images fa-inverse" id="img04"></i>
-              <i class="far fa-paper-plane fa-inverse" id="img05"></i>
             </div>
-          </div>
-        </div>
-      </nav>
-      <main role="main" class="col-lg-9 ml-md-auto offset-md-1 bg-white h-100">
-        <header class="img_top1">
-          <img src="images/avatar.png" class="img_avatar" />
-
-          <div class="text-center text-sm-right titulo1 wow bounceInRight">
-            <h2>Ricardo Pedrosa Minaya</h2>
-            <h4 class="texto_amarelo"><i class="fas fa-user-circle mr-2"></i> Designer de Interface Digital
-              <br /> UX/UI/Front-End</h4>
-          </div>
-
         </header>
 
-        <div class="conteudo p-5 bg-white">
-          <section style="padding-bottom: 450px;">
-
-            <div class="txt_abertura text-center pt-lg-5 pt-md-4">
-              Este site tem como objetivo contar sobre o
-              meu histórico profissional, assim como demonstrar
-              exemplos de alguns de meus melhores trabalhos
-              dentro de cada seguimento de criação.
+        <div class="banner_area container-fluid">
+            <div class="area_conteudo">
+                <h3>Principais Competências</h3>
             </div>
 
-
-            <div class="row select_serv mt-5">
-
-              <div class="col-md-4 col-sm-6 col-12 order-1 blocos_serv1 wow flipInX" -wow-duration="1s"
-                data-wow-delay="0s" id="DD">
-                <div class="caixa_servicos text-center">
-                  <div class="sigla_serv">DD</div>
-                  <div class="sigla_descrev">Designer Digital</div>
-
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 col-12 order-2 blocos_serv2 wow flipInY" -wow-duration="1s"
-                data-wow-delay="0.2s" id="DG">
-                <div class="caixa_servicos text-center">
-                  <div class="sigla_serv">DG</div>
-                  <div class="sigla_descrev">Designer Gráfico</div>
-
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 col-12 order-md-3 order-sm-4  blocos_serv1 wow flipInX" -wow-duration="1s"
-                data-wow-delay="0.4s" id="UX">
-                <div class="caixa_servicos text-center">
-                  <div class="sigla_serv">UX</div>
-                  <div class="sigla_descrev">User eXperience</div>
-
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 col-12 order-md-4 order-sm-3 blocos_serv2 wow flipInY" -wow-duration="1s"
-                data-wow-delay="0.1s" id="DI">
-                <div class="caixa_servicos text-center">
-                  <div class="sigla_serv">DI</div>
-                  <div class="sigla_descrev">Designer Instrucional</div>
-
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 col-12 order-5 blocos_serv1 wow flipInX" -wow-duration="1s"
-                data-wow-delay="0.3s" id="IL">
-                <div class="caixa_servicos text-center">
-                  <div class="sigla_serv">IL</div>
-                  <div class="sigla_descrev">ILustrador</div>
-
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 col-12 order-6 blocos_serv2 wow flipInY" -wow-duration="1s"
-                data-wow-delay="0.5s" id="AP">
-                <div class="caixa_servicos text-center">
-                  <div class="sigla_serv">AP</div>
-                  <div class="sigla_descrev">Artista Plástico</div>
-
-                </div>
-              </div>
-            </div>
-
-            <div class="p-5 my-5 bg-light descri_serv" id="DD_detalhe">
-
-              <div class="row">
-                <div class="col-md-6">
-
-                  <h4><b>DD</b> - Design Digital</h4>
-
-                  <P>Profissional com mais de 10 anos de
-                    experiência como Web Designer,
-                    tendo participado ativamente na
-                    criação de layouts para sistemas
-                    web. Um de meus projetos mais
-                    importantes - site do <a href="http://poupatempo.sp.gov.br" target="_blank">
-                      poupatempo/SP</a></P>
-
-                  <P>Participando de diversos projetos
-                    de edições de vídeos para TV, criação
-                    de desenhos e animações para fins
-                    publicitários, infográficos e games.</P>
-
-                </div>
-
-                <div class="col-md-6">
-                  <h5 class="">Aplicações:</h5>
-
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 88%;"
-                      aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">Layout: Sistemas Web</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 65%;"
-                      aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">Layout: E-mail Marketing</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 95%;"
-                      aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">Criação: Photoshop, Illustrator</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 90%;"
-                      aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Front-End: HTML5, CSS3, BOOTSTRAP 4.3
-                    </div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 58%;"
-                      aria-valuenow="58" aria-valuemin="0" aria-valuemax="100">JAVASCRIPT / Jquery</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 55%;"
-                      aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">MS Sharepoint Designer 2013</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 35%;"
-                      aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">ASP, .NET ou PHP</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 70%;"
-                      aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Edição de Vídeos</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 40%;"
-                      aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">Animações</div>
-                  </div>
-                </div>
-
-                <div class="col-5 col-sm-6 mt-4">
-                  <button type="button" class="btn bg-white shadow-sm px-1 px-sm-3 volta_serv"><i
-                      class="fas fa-arrow-left mr-2"></i> Voltar</button>
-                </div>
-
-                <div class="col-7 col-sm-6 text-right mt-4">
-                  <a href="galeria.html#" type="button" class="btn form-control btn-info shadow-sm">Trabalhos DD</a>
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="p-5 my-5 bg-light descri_serv" id="DG_detalhe">
-
-              <div class="row">
-                <div class="col-md-6">
-
-                  <h4><b>DG</b> - Design Gráfico</h4>
-
-                  <P>Alguns dos meus trabalhos digitais também possuem finalidades de Impressão.</P>
-
-                  <p>Realizo trabalhos gráficos para confecção de flyers,
-                    folders, banners e cartões de visitas, tendo um maior
-                    foco na criação de Identidades Visuais, Logomarcas e Desenho Publicitário.</P>
-
-
-                </div>
-
-                <div class="col-md-6">
-                  <h5 class="">Aplicações:</h5>
-
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 95%;"
-                      aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">Criação com Vetor - Illustrator</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 90%;"
-                      aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Criação de Logomarcas</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 78%;"
-                      aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">Edição de Fotografias - Photoshop</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 60%;"
-                      aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">Pintura Digital - Photoshop</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 45%;"
-                      aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">Editoração: InDesign</div>
-                  </div>
-
-                </div>
-
-                <div class="col-5 col-sm-6 mt-4">
-                  <button type="button" class="btn bg-white shadow-sm px-1 px-sm-3 volta_serv"><i
-                      class="fas fa-arrow-left mr-2"></i> Voltar</button>
-                </div>
-
-                <div class="col-7 col-sm-6 text-right mt-4">
-                  <a href="galeria.html#logo_gl" type="button" class="btn form-control btn-info shadow-sm">Trabalhos
-                    DG</a>
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="p-5 my-5 bg-light descri_serv" id="UX_detalhe">
-
-              <div class="row">
-                <div class="col-md-6">
-
-                  <h4><b>UX</b> - User eXperience</h4>
-
-                  <P>A abordagem gira em torno da proposta de design centrado
-                    nas emoções ou sentimentos dos seres humanos, onde pesquisas e testes com os usuários possibilitam
-                    a criação de produtos que atendam as suas necessidades ao desenvolver de interfaces agradaveis e
-                    intuitivas.</P>
-
-
-                </div>
-
-                <div class="col-md-6">
-                  <h5 class="">Aplicações:</h5>
-
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 80%;"
-                      aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Map. Jornada do Consumidor</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 75%;"
-                      aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Planejamento</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 80%;"
-                      aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Ideação</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 50%;"
-                      aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Criação de Personas</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 60%;"
-                      aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">aplicação de Testes</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 35%;"
-                      aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"> Gameficação</div>
-                  </div>
-
-
-                </div>
-
-                <div class="col-5 col-sm-6 mt-4">
-                  <button type="button" class="btn bg-white shadow-sm px-1 px-sm-3 volta_serv"><i
-                      class="fas fa-arrow-left mr-2"></i> Voltar</button>
-                </div>
-
-                <div class="col-7 col-sm-6 text-right mt-4">
-                  <a href="projetos.html" type="button" class="btn form-control btn-info shadow-sm">Trabalhos UX</a>
-                </div>
-
-
-              </div>
-            </div>
-
-            <div class="p-5 my-5 bg-light descri_serv" id="DI_detalhe">
-
-              <div class="row">
-                <div class="col-md-6">
-
-                  <h4><b>DI</b> - Design Instrucional</h4>
-
-                  <P>Pós graduado neste segmento, tenho como objetivo agregar este
-                    conhecimento nas produção de matérias (acadêmicos ou não), deixando-os
-                    mais atraentes e de fácil compressão.</P>
-
-                  <p>As competência descritas aqui, foram postas à prova durante
-                    minha formação acadêmica e na oferta de cursos atuando como voluntáriado.</P>
-
-                </div>
-
-                <div class="col-md-6">
-                  <h5 class="">Aplicações:</h5>
-
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 60%;"
-                      aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">Gerenciamento de Projetos Educacionais
-                    </div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 65%;"
-                      aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">Análise de Requisitos / Público Alvo
-                    </div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 85%;"
-                      aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Criação de Roteiro</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 90%;"
-                      aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Criação de Storyboads</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 70%;"
-                      aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Ministrar Aulas / Treinamentos</div>
-                  </div>
-
-                </div>
-
-                <div class="col-5 col-sm-6 mt-4">
-                  <button type="button" class="btn bg-white shadow-sm px-1 px-sm-3 volta_serv"><i
-                      class="fas fa-arrow-left mr-2"></i> Voltar</button>
-                </div>
-
-                <div class="col-7 col-sm-6 text-right mt-4">
-                  <a href="Projetos/Galeria_imgs/DI/TCC_DI_2015_Ricardo_Pedrosa_Minaya.pdf" target="_blank"
-                    type="button" class="btn form-control btn-info shadow-sm">TCC em DI</a>
-                </div>
-
-
-              </div>
-
-            </div>
-
-            <div class="p-5 my-5 bg-light descri_serv" id="IL_detalhe">
-
-              <div class="row">
-                <div class="col-md-6">
-
-                  <h4><b>IL</b> - ILustrações</h4>
-
-                  <P>Desenhista Publicitário, com mais de 25 anos de experiência na criação de
-                    desenhos dos mais variados estilos, com a adição característica de meu estilo próprio.</P>
-
-                  Ofereço não somente a produção de materiais artísticos como também
-                  a oportunidade de ensinar minhas técnicas aos interessados.</P>
-
-
-                </div>
-
-                <div class="col-md-6">
-                  <h5 class="">Aplicações:</h5>
-
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 95%;"
-                      aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">Cartunismo</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 80%;"
-                      aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Caricaturista</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 70%;"
-                      aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Treinamento de Foco</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 70%;"
-                      aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Treinamento de Coord. Motôra</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 85%;"
-                      aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">Ministrar Aulas (Jovens e Adultos)</div>
-                  </div>
-
-
-                </div>
-
-                <div class="col-5 col-sm-6 mt-4">
-                  <button type="button" class="btn bg-white shadow-sm px-1 px-sm-3 volta_serv"><i
-                      class="fas fa-arrow-left mr-2"></i> Voltar</button>
-                </div>
-
-                <div class="col-7 col-sm-6 text-right mt-4">
-                  <a href="galeria.html#ilust_gl" type="button" class="btn form-control btn-info shadow-sm">Trabalhos
-                    IL</a>
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="p-5 my-5 bg-light descri_serv" id="AP_detalhe">
-
-              <div class="row">
-                <div class="col-md-6">
-
-                  <h4><b>AP</b> - Artes Plásticas</h4>
-
-                  <P>Nunca trabalhei formalmente com Artes Plásticas, mas já participei de inúmeros eventos temáticos
-                    por diversão.</P>
-
-                  <p>Adoto essa atividade como hobby, mas não descarto a possibilidade de utiliza-la para fins
-                    comerciais.</P>
-
-
-                </div>
-
-                <div class="col-md-6">
-                  <h5 class="">Aplicações:</h5>
-
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 80%;"
-                      aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Modelagem em Clay</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 75%;"
-                      aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Desenv. Moldes em Silicone</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 75%;"
-                      aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Modelagem com Mat. Reciclados</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 60%;"
-                      aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">Pintura em Naquin</div>
-                  </div>
-                  <div class="progress mb-2">
-                    <div class="progress-bar bg-info text-left pl-2" role="progressbar" style="width: 60%;"
-                      aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">Esculturas / Maquetes</div>
-                  </div>
-
-
-                </div>
-
-                <div class="col-5 col-sm-6 mt-4">
-                  <button type="button" class="btn bg-white shadow-sm px-1 px-sm-3 volta_serv"><i
-                      class="fas fa-arrow-left mr-2"></i> Voltar</button>
-                </div>
-
-                <div class="col-7 col-sm-6 text-right mt-4">
-                  <a href="galeria.html#Ap_gl" type="button" class="btn form-control btn-info shadow-sm">Trabalhos
-                    AP</a>
-                </div>
-
-              </div>
-
-            </div>
-
-
-
-            <div class="row my-4">
-
-              <div class="col-12">
-                <h2 class="mt-5 mb-4">News</h2>
-              </div>
-
-              <div class="col-sm-12 col-md-6 order-2 align-self-center my-4">
-                <h4 class="mb-3">Lading Page - Campanha Kalunga</h4>
-
-                <p>
-                  Teste realizado para candidatura à vaga de Web Designer oferecida pela empresa Kalunga.
-                  Criação de Campanha
-                  (identidade visual e logo) para
-                  uma data comemorativa do
-                  varejo ou mesmo para uma
-                  categoria do site Kalunga.com.
-
-                  Utilização de HTML5,
-                  CSS3, Javascript/JQuery e
-                  aplicar boas técnicas de layout
-                  responsivo e usabilidade. (08/2020)
-                </p>
-                <p class="text-center">
-                  <a href="Projetos/kalunga/kalunga.html" target="_blank" type="button"
-                    class="btn btn-light shadow-sm px-4"> &gt;&gt; Clique e veja o
-                    resultado</a></p>
-              </div>
-
-              <div class="col-sm-12 col-md-6 order-1 text-center  mb-4">
-
-                <a href="Projetos/kalunga/kalunga.html" target="_blank"><img
-                    src="Projetos/Galeria_imgs/Webdesigner/Kalunga.jpg" class="w-50 rounded-lg news_img wow zoomIn"
-                    -wow-duration="1s" data-wow-delay="0.3s"
-                    alt="Lading Page - Campanha / Data Comemorativa - E-commerce Kalunga"></a>
-              </div>
-
-              <div class="col-sm-12 col-md-6 order-4 order-md-3 align-self-center">
-                <h4 class="my-4">Lading Page - Produto Multilaser</h4>
-
-                <p>
-                  Me candidatei à vaga de Web Designer anunciada pela empresa Multilaser.
-                  Esta, por sua vez, me enviou um teste de Criação + Front-End
-                  responsivo de uma "lading page".
-                  Trabalho realizado tendo como refêrencia documentação e banco de imagens. (08/2020)
-                </p>
-                <p class="text-center">
-                  <a href="Projetos/multilaser/Teste_Ricardo_Minaya.html" target="_blank" type="button"
-                    class="btn btn-light shadow-sm px-4"> &gt;&gt; Clique e veja o
-                    resultado</a></p>
-              </div>
-
-              <div class="col-sm-12 col-md-6 order-3 order-md-4 my-4">
-
-                <a href="Projetos/multilaser/Teste_Ricardo_Minaya.html" target="_blank"><img
-                    src="Projetos/Galeria_imgs/Webdesigner/Multilaser_test.jpg"
-                    class="w-100 rounded-lg news_img wow zoomIn" -wow-duration="1s" data-wow-delay="0.3s"
-                    alt="Lading Page - Produto Multilaser"></a>
-              </div>
-
-            </div>
-
-            <div class="row my-4">
-
-              <div class="col-sm-12 col-md-6 py-5">
-                <h4 class=" mb-5">Banner para o LinkedIn</h4>
-                <a href="#" data-toggle="modal" data-target="#modal_view" id="ver1" alt="Ativitade Connectcom"><img
-                    src="Projetos/Galeria_imgs/Ilustracao/connectcom_1.jpg"
-                    class="w-100 rounded-lg news_img mb-md-3 wow zoomIn" -wow-duration="1s" data-wow-delay="0.3s" /></a>
-                <p class="mt-4">
-                  Imagem criada como teste solicitado pela empresa Connectcom, referente a oportuniade de Web Designer
-                  (05/2020).
-                </p>
-              </div>
-
-              <div class="col-sm-12 col-md-6 py-5">
-                <h4 class="mb-3">Ilustração para Tatuagem</h4>
-                <a href="#" data-toggle="modal" data-target="#modal_view" id="ver2" alt="Ativitade de Ilustração"><img
-                    src="Projetos/Galeria_imgs/Ilustracao/She-Ha.png" class="w-100 news_img rounded-lg wow zoomIn"
-                    -wow-duration="1s" data-wow-delay="0.3s" /></a>
-                <p class="mt-4">
-                  Ilustração criada com base nas exigências do cliente para futura confecção de tatuagem (06/2020)
-                </p>
-
-              </div>
-
-              <div class="col-12 text-center text-md-right">
-
-                <a href="galeria.html" class="link_mais"><i
-                    class="fas fa-plus fa-5x mx-3 float-none float-md-right mais_tramp"></i>
-                  <p class="d-none d-md-block" style="margin-top: 30px;">Outros Trabalhos </p>
-                </a>
-
-              </div>
-
-            </div>
-
-
-            <div class="col-12">
-              <h2 class="my-5">Depoimentos</h2>
-            </div>
-
-            <!-- DEPOIMENTOS -->
-            <div class="testimonials">
-
-              <div class="swiper-container">
+            <!-- Swiper -->
+            <div class="swiper-container">
                 <div class="swiper-wrapper">
-
-                  <div class="swiper-slide">
-                    <div class="card_dep">
-                      <div class="layer">
-                        <div class="content">
-                          <p>" Sempre demonstrou habilidade para as entregas com eficácia, qualidade, agilidade e
-                            eficiência. Todos que trabalhavam com ele faziam questão de lhe fazer elogios. "</p>
-                          <div class="imgBx">
-                            <img src="images/dep01.jpg">
-                          </div>
-                          <div class="detalhes">
-                            <h3>Hanns Schults<br><span>Analista de MIS Senior</span></h3>
-                          </div>
+                    <div class="swiper-slide">
+                        <div class="row dentro_slider">
+                            <div class="col-lg-6 text-left">
+                                <h5>Web Designer</h5>
+                                <p>
+                                    Atuando na função desde 2011, trabalhei em
+                                    divesas empresas. Boa parte deste periodo, dando
+                                    suporte a criação de soluções B2B (Sistemas Web,
+                                    Dashboards, App windows).</p>
+                                <p>
+                                    <b>Ferramentas:</b> Photoshop, Illustrator, Figma,
+                                    VS Code, Sharepoint Designer.
+                                </p>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                                <img src="imagens/comp1.png">
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
 
-                  <div class="swiper-slide">
-                    <div class="card_dep">
-                      <div class="layer">
-                        <div class="content">
-                          <p>" Como sempre, um excelente Trabalho " <br> <br> <i class="far fa-thumbs-up fa-2x"></i></p>
-                          <div class="imgBx">
-                            <img src="images/dep02.jpg">
-                          </div>
-                          <div class="detalhes">
-                            <h3>Renato Penha<br><span>Gestor de Projetos</span></h3>
-                          </div>
+                    <div class="swiper-slide">
+                        <div class="row dentro_slider">
+                            <div class="col-lg-6 text-left">
+                                <h5>Front - End</h5>
+                                <p>
+                                    Junto do processo de criação, atuo como
+                                    desenvolvedor Font-end. Minha competência
+                                    nesta área é avançada, pois estudei e atuo
+                                    nesta atividade desde 1997.</p>
+                                <p>
+                                    <b>Linguagem: </b> HTML5, CSS3, JAVASCRIPT,
+                                    JQUERY, BOOTSTRAP.
+                                </p>
+
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                                <img src="imagens/comp2.png">
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
 
-                  <div class="swiper-slide">
-                    <div class="card_dep">
-                      <div class="layer">
-                        <div class="content">
-                          <p>"Nunca atrasou uma entrega. Consegue captar e concluir as demandas exigidas com ótima
-                            qualidade."</p>
-                          <div class="imgBx">
-                            <img src="images/dep03.jpg">
-                          </div>
-                          <div class="detalhes">
-                            <h3>Jonas A. Borges<br><span>Gestor</span></h3>
-                          </div>
+                    <div class="swiper-slide">
+                        <div class="row dentro_slider">
+                            <div class="col-lg-6 text-left">
+                                <h5>Ilustrador</h5>
+                                <p>
+                                    Antes mesmo da minha carreira em TI ter iniciado,
+                                    fui desenhista e professor de desenho
+                                    publicitário. Posteriormente iniciei a aplicação desta arte
+                                    em ilustrações digitais das mais variadas finalidades.
+                                </p>
+                                <p>
+                                    <b>Tipos: </b>Logomarcas, Iconografia, Personagens,
+                                    Mascotes, Caricaturas e Impressos em geral.
+                                </p>
+
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                                <img src="imagens/comp3.png">
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
 
+                    <div class="swiper-slide">
+                        <div class="row dentro_slider">
+                            <div class="col-lg-6 text-left">
+                                <h5>Usabilidade e Aprendizagem</h5>
+                                <p>
+                                    Incluso em meu pacote de competências, tive a
+                                    oportunidade de aplicar processos de
+                                    UX em diversos projetos.</p>
+                                <p>Finalizei minha pós-graduação em 2015
+                                    como Designer Instrucional,
+                                    visando desenvolver e gerenciar métodos de aprendizagem,
+                                    durante o processo de criação de interfaces digitais.
+                                </p>
+
+
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                                <img src="imagens/comp4.png">
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
-              </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <div class="skills_area container-fluid">
+            <div class="area_conteudo">
+                <div class="row area_btn_skills">
+                    <div class="col-md-8 col-lg-6 order-md-1 order-2 align-self-center">
+
+                        <div class="conteudo_skill" id="area_ui">
+                            <h3 class="mb-4">Skills - User Interface</h3>
+                            <div class="barra_skill l90"><span>Web Systems</span></div>
+                            <div class="barra_skill l65"><span>Windows Forms</span></div>
+                            <div class="barra_skill l75"><span>Web Sites</span></div>
+                            <div class="barra_skill l70"><span>App Mobile</span></div>
+                            <div class="barra_skill l90"><span>Front-End</span></div>
+                            <div class="barra_skill l65"><span>Guia de Estilos</span></div>
+                        </div>
+
+                        <div class="conteudo_skill" id="area_dg">
+                            <h3 class="mb-4">Skills - Designer Gráfico</h3>
+                            <div class="barra_skill l90"><span>Vetorização</span></div>
+                            <div class="barra_skill l65"><span>Tratamento de Imagens</span></div>
+                            <div class="barra_skill l50"><span>Pintura Digital</span></div>
+                            <div class="barra_skill l30"><span>3D</span></div>
+                            <div class="barra_skill l70"><span>Finalidades Impressas</span></div>
+                            <div class="barra_skill l50"><span>Campanhas de Marketing</span></div>
+                        </div>
+
+                        <div class="conteudo_skill" id="area_ux">
+                            <h3 class="mb-4">Skills - User Experience</h3>
+                            <div class="barra_skill l80"><span>Fluxo/ Jornada/ Roteiro</span></div>
+                            <div class="barra_skill l65"><span>Análise de Requisitos</span></div>
+                            <div class="barra_skill l75"><span>Ideação</span></div>
+                            <div class="barra_skill l90"><span>StoryBoards/ Wireframe</span></div>
+                            <div class="barra_skill l30"><span>Personas</span></div>
+                            <div class="barra_skill l50"><span>Aplicação de Testes</span></div>
+                        </div>
+
+                        <div class="conteudo_skill" id="area_di">
+                            <h3 class="mb-4">Skills - Designer Instrucional</h3>
+                            <div class="barra_skill l50"><span>Gestão Proj. Aprendizagem</span></div>
+                            <div class="barra_skill l65"><span>Análise de Requisitos</span></div>
+                            <div class="barra_skill l70"><span>Roteiro</span></div>
+                            <div class="barra_skill l80"><span>StoryBoards</span></div>
+                            <div class="barra_skill l70"><span>Ministrar Aulas</span></div>
+                            <div class="barra_skill l40"><span>Análise de Resultados</span></div>
+                        </div>
+
+                        <div class="conteudo_skill" id="area_il">
+                            <h3 class="mb-4">Skills - Ilustrador</h3>
+                            <div class="barra_skill l90"><span>Personagens</span></div>
+                            <div class="barra_skill l40"><span>Paisagens</span></div>
+                            <div class="barra_skill l50"><span>Objetos</span></div>
+                            <div class="barra_skill l85"><span>Logomarcas</span></div>
+                            <div class="barra_skill l55"><span>Iconografia</span></div>
+                            <div class="barra_skill l50"><span>Animações</span></div>
+                        </div>
+
+                        <div class="conteudo_skill" id="area_ap">
+                            <h3 class="mb-4">Skills - Artista Plástico</h3>
+                            <div class="barra_skill l90"><span>Modelagem em Clay</span></div>
+                            <div class="barra_skill l70"><span>Moldes em Silicone</span></div>
+                            <div class="barra_skill l80"><span>Esculturas Resina Epox</span></div>
+                            <div class="barra_skill l70"><span>Cosplay e Acessórios</span></div>
+                            <div class="barra_skill l40"><span>Maquetes</span></div>
+                            <div class="barra_skill l55"><span>Pinturas</span></div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4 col-lg-6 order-md-2 order-1 align-self-center">
+                        <div class="row">
+
+                            <div class="col-2 col-md-6 col-lg-4 btn-SKILL ativo" id="ui_btn"> UI </div>
+                            <div class="col-2 col-md-6 col-lg-4 btn-SKILL" id="dg_btn"> DG </div>
+                            <div class="col-2 col-md-6 col-lg-4 btn-SKILL" id="ux_btn"> UX </div>
+                            <div class="col-2 col-md-6 col-lg-4 btn-SKILL" id="di_btn"> DI </div>
+                            <div class="col-2 col-md-6 col-lg-4 btn-SKILL" id="il_btn"> IL </div>
+                            <div class="col-2 col-md-6 col-lg-4 btn-SKILL" id="ap_btn"> AP </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="trabalhos_area container-fluid">
+            <div class="area_conteudo">
+                <h3 class="my-5">Últimos Trabalhos</h3>
+
+                <div class="row">
+                    <div class="col-lg-6 d-flex justify-content-center flex-column bd-highlight">
+
+                        <div class="row bd-highlight mb-5">
+                            <div class="col-3 ml-3 red_box">
+                                UI
+                            </div>
+                            <div class="col pl-4 flex-column justify-content-center align-self-center">
+                                <h1 class="p-0 m-0">Kalunga</h1>
+                                <p>Lading Page + Front-end</p>
+                            </div>
+                        </div>
+
+                        <div class="bd-highlight">
+                            <p>
+                                Teste realizado para candidatura à vaga de Web Designer
+                                oferecida pela empresa Kalunga. Criação de Campanha
+                                (identidade visual e logo) para uma data comemorativa
+                                do varejo ou mesmo para uma categoria do site Kalunga.com.
+                            </p>
+                            <p>
+                                Utilização de HTML5, CSS3, Javascript/JQuery e aplicação de
+                                técnicas de layout responsivo.
+                            </p>
+                        </div>
+
+                        <a href="Projetos/kalunga/kalunga.html" target="_blank"
+                            class="mt-auto bd-highlight text-center wow fadeInUp" -wow-duration="1s">
+                            <img src="imagens/news/001.png" class="w-75 my-5" alt="Protótipo - Kalunga">
+                        </a>
+
+                    </div>
+
+                    <div class="col-lg-6 d-flex justify-content-center flex-column bd-highlight">
+
+                        <div class="row mb-5 bd-highlight">
+                            <div class="col-3 ml-3 red_box">
+                                UI
+                            </div>
+                            <div class="col pl-4 flex-column justify-content-center align-self-center">
+                                <h1 class="p-0 m-0">Multilaser</h1>
+                                <p>Lading Page + Front-end</p>
+                            </div>
+                        </div>
+                        <div class="bd-highlight">
+                            <p>
+                                Desafio de Web Designer oferecido pela
+                                empresa Multilaser, referente ao processo seletivo.
+                                Criação + Front-End responsivo de uma "lading page",
+                                sem a utilização de Javascript.
+
+                            </p>
+                            <p>
+                                Este trabalho teve como refêrencia, documentação e banco
+                                de imagens a serem seguidos.
+                            </p>
+                        </div>
+                        <a href="Projetos/multilaser/Teste_Ricardo_Minaya.html" target="_blank"
+                            class="mt-auto bd-highlight text-center wow fadeInUp" -wow-duration="1s">
+                            <img src="imagens/news/002.png" class="w-75 my-5" alt="Protótipo - Multilaser">
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="outros_trabs container-fluid">
+
+            <div class="area_click">
+                <div class="area_conteudo">
+                    <a href="Projetos/Galeria_imgs/Ilustracao/connectcom_1.jpg" class="row my-3"
+                        title="Banner para Linkedin">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-3 ml-3 red_box">
+                                    DG
+                                </div>
+                                <div class="col pl-4 flex-column justify-content-center align-self-center">
+                                    <h1 class="p-0 m-0">Connectcom</h1>
+                                    <p>Banner para Redes Sociais</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-4 mt-lg-0 text-center text-md-left align-self-center h-100">
+                            <p>Imagem criada como teste, solicitado pela empresa Connectcom referente a oportuniade
+                                de
+                                Web Designer.</p>
+                        </div>
+                    </a>
+                </div>
             </div>
 
-
-            <script src="js/swiper-bundle.min.js"></script>
-
-            <script>
-              var swiper = new Swiper('.swiper-container', {
-                effect: 'coverflow',
-                grabCursor: true,
-                centeredSlides: true,
-                slidesPerView: 'auto',
-                coverflowEffect: {
-                  rotate: 0,
-                  stretch: 0,
-                  depth: 0,
-                  modifier: 1,
-                  slideShadows: true,
-                },
-                pagination: {
-                  el: '.swiper-pagination',
-                }, loop: true,
-              });
-            </script>
-
-
-
-
-
-
-
-          </section>
-          <div class="fim_pag text-right pt-5 pr-md-5">
-            <h5>Ricardo Pedrosa Minaya - Site Portifólio</h5>
-
-            <div class="row mt-5 pt-4 empurra">
-              <div class="col-md-6 text-left">
-                <span>Outros trabalhos disponíveis:</span>
-                <div class="row">
-                  <div class="col-6 mt-4">
-                    <a href="https://graphicriver.net/user/janjovisk/portfolio" target="_blank"><img
-                        src="images/graphicriver.png" class="w-100" title="Graphic River" /></a>
-                  </div>
-
-                  <div class="col-6 mt-4">
-                    <a href="https://3docean.net/user/janjovisk/portfolio" target="_blank"><img src="images/3Docean.png"
-                        class="w-100" title="3D Ocean" /></a>
-                  </div>
-
+            <div class="area_click">
+                <div class="area_conteudo">
+                    <a href="Projetos/Galeria_imgs/Ilustracao/She-Ha.png" class="row my-3"
+                        title="Tatuagem - Serviço Particular">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-3 ml-3 red_box">
+                                    IL
+                                </div>
+                                <div class="col pl-4 flex-column justify-content-center align-self-center">
+                                    <h1 class="p-0 m-0">Pessoa Física</h1>
+                                    <p>Ilustração para Tatuagem</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-4 mt-lg-0 text-center text-md-left align-self-center h-100">
+                            <p>IIlustração criada com base nas exigências do cliente para futura confecção de
+                                tatuagem.
+                                Imagem vetorizada.</p>
+                        </div>
+                    </a>
                 </div>
-
-              </div>
-
-              <div class="col-md-6 mt-4 mt-md-1">
-                <div class="row">
-                  <p class="text-right w-100 pr-4">Me encontre no:</p>
-                  <div class="col-2 offset-8 offset-md-8 col-md-2 p-1">
-                    <a href="https://www.linkedin.com/in/ricardo-pedrosa-minaya-08934b3a" target="_blank"><img
-                        src="images/ico_linkedin.png" title="Meu perfil: LinkedIn" class="w-100" /></a>
-                        
-                  </div>
-
-                  <div class="col-2 col-md-2 p-1">
-                    <a href="https://www.facebook.com/minaya.ricardo" target="_blank"><img src="images/ico_facebook.png"
-                        title="Meu perfil: Facebook" class="w-100" /></a>
-                  </div>
-                  
-                </div>
-              </div>
             </div>
-          </div>
-      </main>
-
-
-    </div>
-  </div>
-
-
-  <footer class="container-fluid footer1">
-    <div class="btn-top"></div>
-
-  </footer>
-
-  <!-- Menu Mobile  -->
-
-  <nav class="navbar-expand fixed-bottom d-block d-lg-none d-xl-none menu_mobile">
-    <div class="navbar-nav container pl-md-5">
-      <div class="row w-100">
-        <div class="col-1">
 
         </div>
-        <div class="col-2 text-center">
-          <a class="nav-item nav-link item_ball_menu text-center ativo" href="index.html"><span>Sobre</span><i
-              class="far fa-id-badge fa-inverse"></i></a>
-        </div>
-        <div class="col-2 text-center">
-          <a class="nav-item nav-link item_ball_menu text-center" href="historico.html"><span>Histórico</span><i
-              class="fas fa-history fa-inverse"></i></a>
-        </div>
-        <div class="col-2 text-center">
-          <a class="nav-item nav-link item_ball_menu text-center" href="projetos.html"><span>Projetos</span><i
-              class="fas fa-briefcase fa-inverse"></i></a>
-        </div>
-        <div class="col-2 text-center">
-          <a class="nav-item nav-link item_ball_menu text-center" href="galeria.html"><span>Galeria</span><i
-              class="far fa-images fa-inverse" style="margin-left: -2px;"></i></a>
-        </div>
-        <div class="col-2 text-center">
-          <a class="nav-item nav-link item_ball_menu text-center" href="contato.html"><span>Contato</span><i
-              class="far fa-paper-plane fa-inverse" style="margin-left: -2px;"></i></a>
-        </div>
-        <div class="col-1">
+
+        <div class="depoimentos_area container-fluid">
+            <div class="area_conteudo">
+                <h3 class="my-5">Depoimentos</h3>
+
+                <!-- Swiper -->
+                <div class="slide_dep mb-5">
+
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="dep_card">
+                                <div class="row pt-5">
+                                    <div class="col-12 col-sm-8 px-5">
+                                        <h5>Jonas A. Borges</h5>
+                                        <h4>Gestor</h4>
+                                    </div>
+                                </div>
+
+                                <div class="row pt-sm-4 px-3">
+                                    <div class="col-10 text-sm-right offset-1 offset-sm-0 col-sm-3 offset-1">
+                                        <img src="imagens/deps/dep03.jpg">
+                                    </div>
+                                    <div class="col-sm-8 p-4">
+                                        <p>"Nunca atrasou uma entrega. Consegue captar e concluir
+                                            as demandas exigidas com ótima qualidade."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="dep_card">
+                                <div class="row pt-5">
+                                    <div class="col-12 col-sm-8 px-5">
+                                        <h5>Hanns Schults</h5>
+                                        <h4>Analista de MIS Senior</h4>
+                                    </div>
+                                </div>
+
+                                <div class="row pt-sm-4 px-3">
+                                    <div class="col-10 text-sm-right offset-1 offset-sm-0 col-sm-3 offset-1">
+                                        <img src="imagens/deps/dep01.jpg">
+                                    </div>
+                                    <div class="col-sm-8 p-4">
+                                        <p>" Sempre demonstrou habilidade para as entregas com eficácia, qualidade,
+                                            agilidade e
+                                            eficiência. Todos que trabalhavam com ele faziam questão de lhe fazer
+                                            elogios. "</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="dep_card">
+                                <div class="row pt-5">
+                                    <div class="col-12 col-sm-8 px-5">
+                                        <h5>Renato Penha</h5>
+                                        <h4>Gestor de Projetos</h4>
+                                    </div>
+                                </div>
+
+                                <div class="row pt-sm-4 px-3">
+                                    <div class="col-10 text-sm-right offset-1 offset-sm-0 col-sm-3 offset-1">
+                                        <img src="imagens/deps/dep02.jpg">
+                                    </div>
+                                    <div class="col-sm-8 p-4">
+                                        <p>" Como sempre, um excelente Trabalho " </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
         </div>
-      </div>
-
-    </div>
-  </nav>
-
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap-4.3.1.js"></script>
-
-  <!-- Funções Extras -->
-  <script type="text/javascript" src="js/global_functions.js"></script>
 
 
-  <!-- facebook Script-->
 
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v8.0"
-    nonce="meZzGdoV"></script>
+        <footer class="footer_area container-fluid">
+            <div class="area_conteudo">
+                <img src="imagens/logo_footer.png" class="">
+
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 my-4 my-md-1">
+                        <h4 class="my-4">Ricardo Pedrosa Minaya</h4>
+                        <p class="p-0 m-0">
+                            39 anos, Solteiro.
+                        </p>
+                        <p class="p-0 m-0">
+                            Vila Invernada - São Paulo/SP.
+                        </p>
+
+                        <div>
+                            <a href="https://www.linkedin.com/in/ricardo-pedrosa-minaya-08934b3a" target="_blank"><img
+                                    src="imagens/ico_in.png" alt="Acesso - Perfil Linkedin" class="ico_footer"></a>
+                            <a href="mailto:janjovisk@hotmail.com" target="_blank"><img src="imagens/ico_mail.png"
+                                    alt="janjovisk@hotmail.com" class="ico_footer"></a>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 my-4 my-md-1">
+                        <h4 class="my-4">Interesse Profissional</h4>
+                        <ul class="pl-4">
+                            <li>Designer de Interface</li>
+                            <li>Designer de Experiência do Usuário</li>
+                            <li>Designer Gráfico</li>
+                            <li>Designer Instrucional</li>
+                            <li>Ilustrador</li>
+                            <li>Instrutor</li>
 
 
-  <div class="compartilhe">
+                        </ul>
+                    </div>
 
-    <!-- COMPARTILHAR facebook-->
+                    <div class="col-md-4 my-4 my-md-1 text-md-center port_extern">
+                        <h4 class="my-4">Outros Portfólios:</h4>
 
-    <div class="fb-like" data-href="https://janjovisk.github.io/Portfolio/index.html" data-width=""
-      data-layout="button" data-action="like" data-size="large" data-share="true"></div>
+                        <p><a href="https://graphicriver.net/user/janjovisk/portfolio" target="_blank"><img
+                                    src="imagens/evato1.png" alt="Site: Graphicriver.com"></a></p>
+                        <p><a href="https://3docean.net/user/janjovisk/portfolio" target="_blank"><img
+                                    src="imagens/evato2.png" alt="Site: 3dOcean.com"></a></p>
 
-    <img src="images/ico_facebook.png" title="Compartilhe no LinkedIn" class="share_face" />
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-    <!-- COMPARTILHAR Linkedin-->
 
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://janjovisk.github.io/Portfolio/index.html&title=Portfólio Minaya&summary=Portifólio Profissional de Ricardo P. Minaya - Designer de Interface Digital UX/UI/Front-End"
-      id="linkedin-share-btt" rel="nofollow" target="_blank" class="linkedin-share-button">
-      <img src="images/ico_linkedin.png" title="Compartilhe no LinkedIn" class="share_In" />
-    </a>
+    </section>
 
-    <!-- Linkedin Script -->
+    <!-- Funções das Páginas -->
+    <script src="js/functions.js"></script>
 
-    <script type="text/javascript">
-      //Constrói a URL depois que o DOM estiver pronto
-      document.addEventListener("DOMContentLoaded", function () {
-        var url = encodeURIComponent(window.location.href); //url
-        var titulo = encodeURIComponent(document.title); //título
-        var linkedinLink = "https://www.linkedin.com/shareArticle?mini=true&url=" + url + "&title=" + titulo;
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
 
-        //tenta obter o conteúdo da meta tag description
-        var summary = document.querySelector("meta[name='description']");
-        summary = (!!summary) ? summary.getAttribute("content") : null;
+    <script type="text/javascript" src="dist/simple-lightbox.js"></script>
 
-        //se a meta tag description estiver ausente...
-        if (!summary) {
-          //...tenta obter o conteúdo da meta tag og:description
-          summary = document.querySelector("meta[property='og:description']");
-          summary = (!!summary) ? summary.getAttribute("content") : null;
-        }
-        //altera o link do botão
-        linkedinLink = (!!summary) ? linkedinLink + "&summary=" + encodeURIComponent(summary) : linkedinLink;
-        document.getElementById("linkedin-share-btt").href = linkedinLink;
-      }, false);
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+
+            coverflowEffect: {
+                slideShadows: false,
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+
+
+        var swiper = new Swiper('.slide_dep', {
+            grabCursor: true,
+            slidesPerView: 1,
+            spaceBetween: 50,
+            slidesPerGroup: 1,
+            loop: true,
+            // loopFillGroupWithBlank: true,
+            breakpoints: {
+                1024: {
+
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 40
+                }
+            },
+            autoplay: {
+                delay: 8000,
+            }
+        });
+
+
+        $(function () {
+
+            var $gallery = $('.area_click .area_conteudo a').simpleLightbox();
+
+            $gallery.on('show.simplelightbox', function () {
+                console.log('Requested for showing');
+            })
+                .on('shown.simplelightbox', function () {
+                    console.log('Shown');
+                })
+                .on('close.simplelightbox', function () {
+                    console.log('Requested for closing');
+                })
+                .on('closed.simplelightbox', function () {
+                    console.log('Closed');
+                })
+                .on('change.simplelightbox', function () {
+                    console.log('Requested for change');
+                })
+                .on('next.simplelightbox', function () {
+                    console.log('Requested for next');
+                })
+                .on('prev.simplelightbox', function () {
+                    console.log('Requested for prev');
+                })
+                .on('nextImageLoaded.simplelightbox', function () {
+                    console.log('Next image loaded');
+                })
+                .on('prevImageLoaded.simplelightbox', function () {
+                    console.log('Prev image loaded');
+                })
+                .on('changed.simplelightbox', function () {
+                    console.log('Image changed');
+                })
+                .on('nextDone.simplelightbox', function () {
+                    console.log('Image changed to next');
+                })
+                .on('prevDone.simplelightbox', function () {
+                    console.log('Image changed to prev');
+                })
+                .on('error.simplelightbox', function (e) {
+                    console.log('No image found, go to the next/prev');
+                    console.log(e);
+                });
+
+        });
+
+
     </script>
-
-  </div>
 
 
 </body>
