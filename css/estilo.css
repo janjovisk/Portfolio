@@ -182,13 +182,13 @@ a:hover{ color: #fd2136;}
 /* -------------   Cabeçalho Responsivo  ------------------- */
 
 
-@media screen and (max-height:677px) and (max-width:991px){
+@media screen and (max-height:575px) and (min-width:677px){
   .header_home{
-    background: url(../imagens/top1.png) no-repeat center -120px;
+    background: url(../imagens/top1.png) no-repeat center -140px !important;
   }
   .header_home .logo {
     width: 80px !important;
-    top: 30px;
+    top: 20px !important;
   }
 
   .avatar{
@@ -201,7 +201,7 @@ a:hover{ color: #fd2136;}
   }
 
   .header_home .area_titulo {
-    margin-top: 20px !important;
+    margin-top: 0px !important;
   }
 
   .aviso_home {
