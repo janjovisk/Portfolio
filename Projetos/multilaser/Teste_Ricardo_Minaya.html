@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.90, maximum-scale=0.90, user-scalable=no,">
+    <title>Multilaser - News</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+
+        @font-face {
+            font-family: 'RifficFree-Bold';
+            src: url('fonts/RifficFree-Bold.eot');
+            src: url('fonts/RifficFree-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/RifficFree-Bold.ttf') format('truetype'), url('fonts/RifficFree-Bold.svg#TheSansCorrespondence') format('svg');
+
+        }
+
+        body {
+            width: 100%;
+            background-image: linear-gradient(180deg, #007ea1, #00abda 120px, #00abda 250px, RGBA(255, 255, 255, 0) 250px);
+            background-position: center top;
+            font-family: Arial;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'RifficFree-Bold';
+        }
+
+        h3 {
+            font-size: 2rem;
+            text-align: center;
+            padding: 50px 0;
+            color: #007ea1;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: -10%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 0;
+            background-image: radial-gradient(#f5f5f5 40%, RGBA(255, 255, 255, 0) 70%);
+            background-position: center top;
+
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            max-width: 1366px;
+            min-height: 2000px;
+            margin: 0 auto;
+            background: #ffffff;
+        }
+
+        .cabecalho {
+            position: relative;
+            width: 100%;
+            max-width: 1366px;
+            margin: 0 auto;
+            background: #00abda;
+        }
+
+        #Header_curve {
+            width: 100%;
+            height: 100%;
+            margin-bottom: -16px;
+        }
+
+        #Header_curve path {
+            fill: #ffffff;
+            position: absolute;
+            bottom: 0;
+        }
+
+        #logo_area {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            padding: 40px 100px;
+            display: flex;
+        }
+
+        #logo_area img {
+            margin: auto 6px;
+        }
+
+        .efeito_decorativo_1 {
+            position: absolute;
+            right: 0;
+            width: 80%;
+            opacity: 0.5;
+        }
+
+        .area_titulo {
+            width: 40%;
+            min-width: 300px;
+            position: absolute;
+            z-index: 2;
+            top: 200px;
+            left: 100px;
+            text-align: right;
+        }
+
+        .titulo_produto {
+            color: #c4eeff;
+            font-size: 2.3rem;
+
+        }
+
+        .titulo_produto span {
+            font-size: 4.5rem;
+            color: #ffffff;
+        }
+
+        .modelo_produto {
+            margin-top: 20px;
+            color: #ffffff;
+            font-size: 1rem;
+        }
+
+        .descricao_tit {
+            float: left;
+            text-align: left;
+            font-size: 1.4rem;
+            color: #525252;
+            width: 45%;
+            padding: 40px 20px;
+        }
+
+        .descricao_tit img {
+            float: left;
+            width: 50%;
+            width: 100px;
+            margin: -30px 20px 0 0px;
+            opacity: 0.3;
+        }
+
+        .descricao_tit span {
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+
+        .img_cadeira {
+            position: absolute;
+            top: -420px;
+            right: -80%;
+        }
+
+        .cores {
+            font-size: 1.3rem;
+            width: 50%;
+            min-width: 450px;
+            text-align: center;
+            position: absolute;
+            margin: -50px 0 0 120px;
+        }
+
+        .cores span {
+            float: left;
+            margin: 0 20px 0 0px;
+        }
+
+        .cores .descr_cores {
+            color: #00abda;
+            font-size: 1.1rem;
+            margin-top: 40px;
+        }
+
+        .text_label_cor {
+            padding: 12px 6px;
+        }
+
+        .cores input {
+            display: none;
+        }
+
+        .cores label {
+            float: left;
+            width: 40px;
+            height: 40px;
+            margin: -12px 6px;
+            border: 2px solid #525252;
+            border-radius: 50%;
+            font-size: 0.6em;
+            cursor: pointer;
+            transition: all 0.3s linear;
+        }
+
+        .cores label[for=cinza] {
+            background-color: gray;
+        }
+
+        .cores label[for=branco] {
+            background-color: white;
+        }
+
+        .cores label[for=vermelho] {
+            background-color: red;
+        }
+
+        .cores #cinza:checked~label[for=cinza],
+        .cores #branco:checked~label[for=branco],
+        .cores #vermelho:checked~label[for=vermelho] {
+            animation-name: animacao;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes animacao {
+
+            50% {
+                box-shadow: 0 0 0px 5px green;
+            }
+
+            0%,
+            100% {
+                box-shadow: 0 0 0px 0px green;
+            }
+        }
+
+        #img_cinza,
+        #img_branco,
+        #img_vermelho {
+            opacity: 0;
+            transition: all 0.4s ease-in;
+        }
+
+        #cinza:checked~#img_cinza,
+        #branco:checked~#img_branco,
+        #vermelho:checked~#img_vermelho {
+            opacity: 1;
+        }
+
+
+        /*---------------------------------------*/
+
+        .conteudo {
+            margin: 150px 16px 16px 16px;
+        }
+
+
+        .dimensoes {
+            margin-top: 100px;
+            height: 60px;
+            width: 100%;
+            display: flex;
+        }
+
+        .dimensoes .tamanhos {
+            flex-grow: 1;
+            width: 100%;
+            height: 100%;
+            margin: 0 20px;
+            text-align: center;
+            color: #525252;
+        }
+
+        .dimensoes .tamanhos img {
+            opacity: 0.6;
+            margin-bottom: 10px;
+        }
+
+        .qualidades_prod {
+            margin-top: 150px;
+            display: flex;
+            width: 100%;
+            height: auto;
+
+        }
+
+        .qualidades_prod .box_prod {
+            margin: 0 16px;
+            flex-grow: 1;
+            min-height: 300px;
+            background-color: RGBA(80, 33, 103, 0.1);
+            border-radius: 50px;
+
+        }
+
+        .qualidades_prod .box_prod span {
+            position: absolute;
+            width: 18%;
+            padding: 30px;
+            font-size: 1.8rem;
+            color: RGB(80, 33, 103);
+
+        }
+
+        .qualidades_prod .box_prod img {
+            border-radius: 50px;
+            float: right;
+        }
+
+        .curva {
+            fill: #00abda;
+        }
+
+        footer {
+            margin-top: 100px;
+        }
+
+        .redes_sociais {
+            margin-top: -160px;
+            margin-left: 30px;
+            position: absolute;
+            text-align: center;
+        }
+
+        .redes_sociais img {
+            width: 90px;
+            margin: 5px;
+            transition: all 0.3s ease-in;
+        }
+
+        .redes_sociais img:hover {
+            transform: scale(0.9);
+            transition: all 0.1s ease-in;
+        }
+
+        #Footer_curve {
+            width: 100%;
+            height: 100%;
+            margin-bottom: -4px;
+        }
+
+        .text_assinatura {
+            position: absolute;
+            margin: 50px 0 0 0px;
+            padding: 20px;
+            width: 50%;
+            text-align: left;
+            margin-top: 100px;
+            font-size: 1.1rem;
+            color: #ffffff;
+
+        }
+
+        .text_assinatura img {
+            float: left;
+            margin-right: 20px;
+
+        }
+
+        .mensagem_final {
+            text-align: center;
+            background-color: #00abda;
+            color: #ffffff;
+            font-size: 1.4rem;
+            width: 240px;
+            height: 240px;
+            padding: 60px;
+            margin: 100px 0 0 0;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0px;
+            right: 50px;
+        }
+
+
+        .mensagem_final::after {
+            content: '';
+            background-color: #00617c;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 260px;
+            right: 530px;
+        }
+
+        .mensagem_final::before {
+            content: '';
+            background-color: #007ea1;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 200px;
+            right: 380px;
+        }
+
+        .ver_produto,
+        .ver_video {
+            width: 100%;
+            min-height: 500px;
+            text-align: center;
+        }
+
+
+        .ver_video {
+            margin-top: 120px;
+            background-image: url(Imagens/Patinhas_Elefantes_Azul.png);
+            background-position: right center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .ver_video .video {
+            border-radius: 50px;
+            outline: none;
+            border: none;
+
+        }
+
+        .video {
+            width: 70%;
+            height: 50vh;
+        }
+
+        .ver_produto iframe {
+            width: 100%;
+            height: 100vh;
+            border-radius: 50px;
+        }
+
+        /* Responsividade ------------------------------------------------------------  */
+
+        @media screen and (max-width: 1312px) {
+            .titulo_produto {
+                font-size: 1.8rem;
+            }
+
+            .titulo_produto span {
+                font-size: 3.8rem;
+            }
+
+            body::before {
+                background-image: none;
+            }
+
+        }
+
+        @media screen and (max-width: 1120px) {
+            .titulo_produto {
+                margin-top: -40px;
+                font-size: 1.5rem;
+            }
+
+            .cores {
+                width: 45%;
+            }
+
+            .img_cadeira {
+                right: -95%;
+                transform: scale(0.9);
+            }
+
+            h3 {
+                padding: 100px 0;
+
+            }
+
+            .descricao_tit img {
+                margin: -30px 20px 20px 0px;
+
+            }
+
+            .qualidades_prod .box_prod img {
+                width: 200px;
+            }
+
+            .qualidades_prod .box_prod {
+
+                min-height: 150px;
+            }
+
+            .qualidades_prod .box_prod span {
+                font-size: 1.2rem;
+            }
+
+            #Footer_curve {
+                padding: 25px 0 0 0;
+            }
+
+            .qualidades_prod {
+                margin: 150px 16px;
+            }
+
+            .ver_produto {
+                margin-top: 50px;
+                border: 5px dashed #007ea1;
+                border-radius: 50px;
+                width: 70%;
+                margin: 0 auto;
+            }
+
+        }
+
+
+
+        @media screen and (max-width: 1060px) {
+            .img_cadeira {
+                right: -100%;
+                transform: scale(0.85);
+            }
+
+            .mensagem_final::after,
+            .mensagem_final::before {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 968px) {
+            .img_cadeira {
+                right: -90%;
+                transform: scale(0.75);
+                margin-top: 10px;
+            }
+
+            .efeito_decorativo_1 {
+                display: none;
+            }
+
+            .area_titulo {
+                top: 200px;
+                left: 50px;
+
+            }
+
+            #logo_area {
+                padding: 30px 20px;
+            }
+
+            .area_titulo {
+                transform: scale(0.8);
+                margin-top: -70px;
+            }
+
+            #logo_area img {
+                width: 26%;
+            }
+
+            .cores {
+                margin: -20px 0 0 80px;
+                font-size: 1rem !important;
+            }
+
+
+            .redes_sociais img {
+                width: 60px;
+            }
+
+            #Footer_curve {
+                padding: 70px 0 0 0;
+            }
+
+        }
+
+        @media screen and (max-width: 861px) {
+            .area_titulo {
+                transform: scale(0.8);
+                margin-top: -70px;
+                width: 60%;
+            }
+
+        }
+
+        @media screen and (max-width: 848px) {
+            .descricao_tit {
+                font-size: 1rem;
+                width: 40%;
+
+            }
+
+            .text_assinatura {
+
+                font-size: 0.8rem;
+            }
+
+            .elefante {
+                width: 120px;
+            }
+        }
+
+        @media screen and (max-width: 802px) {
+            .descricao_tit {
+                font-size: 1rem;
+                width: 40%;
+
+            }
+
+            .text_assinatura {
+                font-size: 0.8rem;
+            }
+
+            .elefante {
+                width: 120px;
+            }
+
+            .descricao_tit {
+                text-align: center;
+                display: flex;
+            }
+
+            .descricao_tit img {
+                width: 40%;
+                float: none;
+                margin: 0 auto;
+
+            }
+
+            .qualidades_prod {
+                display: block;
+            }
+
+            .qualidades_prod .box_prod {
+                margin-bottom: 40px;
+            }
+
+            .qualidades_prod .box_prod span {
+                width: 50%;
+                font-size: 1.5rem;
+
+            }
+
+        }
+
+        @media screen and (max-width: 786px) {
+
+            .area_titulo {
+
+                width: 100%;
+            }
+
+            .cores {
+                margin: 240px 0 0 40px;
+                width: 80%;
+            }
+
+            .img_cadeira {
+                right: 20%;
+                margin-top: -180px;
+
+            }
+
+            .conteudo {
+                margin: 400px 16px 16px 16px;
+            }
+
+            .redes_sociais {
+                margin-top: -80px;
+                margin-left: 0px;
+
+            }
+
+            .redes_sociais img {
+                width: 40px;
+                margin-right: 0;
+            }
+
+            .mensagem_final {
+
+                font-size: 1.2rem;
+                width: 200px;
+                height: 200px;
+                padding: 60px;
+                margin: 100px 0 0 0;
+                bottom: 0px;
+                right: 0px;
+            }
+
+            h3 {
+                padding: 0px 20px 150px 20px;
+                font-size: 1.4rem;
+
+            }
+
+            .area_titulo {
+
+                margin-top: -150px;
+                font-size: 1.3rem;
+            }
+
+            .cores {
+                margin: 280px 0 0 40px;
+                width: 80%;
+            }
+
+            .img_cadeira {
+                right: 2%;
+                margin-top: -130px;
+                transform: scale(0.6);
+
+            }
+
+            .conteudo {
+                margin: 400px 16px 16px 16px;
+            }
+
+        }
+
+
+
+        @media screen and (max-width: 625px) {
+
+
+            .elefante {
+                margin-bottom: 50px;
+                width: 50px;
+            }
+
+            .text_assinatura {
+
+                margin-top: 77px;
+            }
+
+            .qualidades_prod {
+                margin: 150px 0px;
+            }
+        }
+
+        @media screen and (max-width: 580px) {
+
+            .area_titulo {
+                margin-right: 16px;
+            }
+
+            .cores {
+
+                width: 90%;
+            }
+
+            .descricao_tit {
+
+                width: 80%;
+                display: block;
+                float: none;
+                font-size: 1.5rem;
+                margin: 40px auto;
+            }
+
+            .descricao_tit img {
+                width: 40%;
+                float: none;
+                margin: 0 auto;
+
+            }
+
+            .elefante {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 425px) {
+
+            .area_titulo,
+            .titulo_produto,
+            .cores {
+                transform: scale(0.8);
+            }
+
+            .modelo_produto {
+                margin: -10px 40px;
+            }
+
+            .cores {
+                margin-left: 0px;
+            }
+
+            .qualidades_prod .box_prod span {
+                width: 36%;
+                font-size: 1.1rem;
+            }
+
+            .dimensoes .tamanhos {
+                font-size: 0.8rem;
+            }
+
+            .dimensoes .tamanhos img {
+                width: 40px;
+            }
+
+            .ver_produto iframe {
+                height: 60vh;
+
+            }
+
+
+
+            .ver_video {
+                margin-top: 0px;
+                background-position: right center;
+                background-size: 200%;
+                width: 100% !important;
+
+            }
+
+            .ver_video video {
+                margin-top: 100px;
+                border-radius: 0px !important;
+            }
+
+            .video {
+                width: 100%;
+            }
+
+            #Footer_curve {
+                padding: 90px 0 0 0;
+            }
+
+            .text_assinatura {
+                margin-top: 87px;
+            }
+
+            .mensagem_final {}
+
+            .text_assinatura {
+                margin-top: 140px;
+                width: 100%;
+            }
+
+            #Footer_curve {
+                padding: 18px 0 0 0;
+            }
+
+            .elefante {
+                display: block;
+            }
+        }
+
+        @media screen and (min-width: 375px) and (max-width: 550px) {
+            .titulo_produto {
+
+                transform: scale(0.8);
+                margin-right: -30px;
+            }
+
+            .modelo_produto {
+                margin-top: 0px;
+                font-size: 0.9rem;
+                margin-right: 20px;
+            }
+
+        }
+
+        @media screen and (max-width: 375px) {
+            .modelo_produto {
+                
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <header class="cabecalho">
+
+            <div id="logo_area">
+                <!-- <img src="Imagens/Multikids-Baby-Elefante-Branco.png" alt="Logo" /> -->
+                <img src="Imagens/Multikids-Baby-Logo-Branco.png" alt="Logo Multikids Baby" />
+                <img src="Imagens/Patinhas_Elefantes_gradiente.png" class="efeito_decorativo_1"
+                    alt="Patinhas Elefantes gradiente" />
+            </div>
+
+            <div class="area_titulo">
+                <h1 class="titulo_produto">CADEIRA PARA AUTO 0-25KG<br /> <span> PRIUS</span> </h1>
+                <div class="modelo_produto">Modelos: <br /> bb637/ bb638/ bb639</div>
+
+
+            </div>
+
+            <svg version="1.1" id="Header_curve" x="0px" y="0px" viewBox="0 0 1366 560"
+                enable-background="new 0 0 1366 560" xml:space="preserve">
+                <ellipse fill="#0600A9" cx="-548" cy="-1343" rx="0" ry="8" />
+                <path
+                    d="M1366,473.26V560H0V276.33C269.52,413.65,623.86,497,1012,497C1133.86,497,1252.38,488.78,1366,473.26z" />
+            </svg>
+
+            <div class="cores">
+                <span>Cores para todos os gosto:</span>
+                <input type="radio" name="cores" id="cinza" checked /><label for="cinza"></label>
+                <img src="Imagens/BB637_01.png" class="img_cadeira" id="img_cinza"
+                    alt="Cadeira para Auto - PRIUS CINZA" />
+
+                <input type="radio" name="cores" id="branco" /><label for="branco"><span
+                        class="text_label_cor">Novo</span></label>
+                <img src="Imagens/BB637_02.png" class="img_cadeira" id="img_branco"
+                    alt="Cadeira para Auto - PRIUS BRANCO" />
+
+                <input type="radio" name="cores" id="vermelho" /><label for="vermelho"></label>
+                <img src="Imagens/BB637_03.png" class="img_cadeira" id="img_vermelho"
+                    alt="Cadeira para Auto - PRIUS VERMELHO" />
+                <P>
+                    <span class="descr_cores">
+                        Desde o pretinho básico até o vermelho ousado que trazem um charme todo especial ao passeio.
+                    </span>
+                </P>
+
+            </div>
+
+        </header>
+
+        <div class="conteudo">
+
+            <div class="descricao_tit">
+                <img src="Imagens/Baby_Cute.png" alt="Bebê Icone" />
+                <div>Para crianças dos grupos 0+, I, e II <span>(desde o nascimento até 25 kgs)</span><br /></div>
+
+            </div>
+
+            <div class="descricao_tit">
+                <img src="Imagens/shield.png" alt="segurança Icone" />
+                <div>Proteção lateral, fornece maior segurança em caso de impactos para a cabeça, corpo e quadris.<br />
+                </div>
+
+            </div>
+
+            <div class="descricao_tit">
+                <img src="Imagens/clean.png" alt="limpeza Icone" />
+                <div>Estofado de alta qualidade e removível, para uma higiene regular.<br /></div>
+
+            </div>
+
+            <div class="descricao_tit">
+                <img src="Imagens/recline.png" alt="Reclínio Icone" />
+                <div>Com 4 opções de reclinio para maior conforto das crianças.<br /></div>
+
+            </div>
+
+        </div>
+
+        <div style="clear: both"></div>
+
+        <div class="dimensoes">
+            <div class="tamanhos">
+                <img src="Imagens/dimen1.png" /><br>
+                61,5cm de Altura
+            </div>
+            <div class="tamanhos">
+                <img src="Imagens/dimen2.png" /><br>
+                52,5cm de Largura
+            </div>
+            <div class="tamanhos">
+                <img src="Imagens/dimen3.png" /><br>
+                42,5cm de Comprimento
+
+            </div>
+            <div class="tamanhos">
+                <img src="Imagens/dimen4.png" /><br>
+                5,8 Kg.
+            </div>
+        </div>
+
+        <div class="qualidades_prod">
+            <div class="box_prod" id="box1">
+                <span>
+                    Simples manuseio, sendo possível reclina-lo com apenas uma mão.
+                </span>
+                <img src="Imagens/reclinar_facil.png" alt="Reclina Fácil" />
+
+            </div>
+
+            <div class="box_prod" id="box2">
+                <span>
+                    Super macio, para total conforto de seu bebê.
+                </span>
+
+                <img src="Imagens/Macio.png" alt="Produto com revestimento macio" />
+
+            </div>
+
+        </div>
+
+
+
+        <div class="ver_video">
+
+            <iframe class="video" src="https://www.youtube.com/embed/NGoThT4b6UQ" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+        </div>
+
+        <h3>
+            Simplificando a vida para você poder rir das trapalhadas. <br />
+            Multikids Baby, seus passeios do dia a dia.
+        </h3>
+
+
+        <footer>
+
+            <div class="mensagem_final">
+                Acompanhe a Multikids Baby e conheça nossa linha completa de soluções para todos os momentos do dia a
+                dia das famílias brasileiras. <br /><br />
+                <strong>Benefício sem mimimi.</strong>
+            </div>
+
+            <div class="text_assinatura">
+
+                <div class="redes_sociais">
+
+                    <a href="https://www.multilaser.com.br/" target="_blank"><img src="Imagens/share4.png"
+                            alt="Compartilhe este Produto" /></a>
+                    <a href="https://www.facebook.com/multilaser" target="_blank"><img src="Imagens/face_ico.png"
+                            alt="Canal do Facebook" /></a>
+                    <a href="https://www.youtube.com/user/OficialMultilaser" target="_blank"><img
+                            src="Imagens/Youtube_ico.png" alt="Canal do Facebook" /></a>
+                    <a href="https://www.instagram.com/multilaser_br/?hl=pt-br" target="_blank"><img
+                            src="Imagens/insta_ico.png" alt="Canal do Instagram" /></a>
+                </div>
+
+                <img src="Imagens/Multikids-Baby-Elefante-Branco.png" class="elefante" alt="Logo" />
+
+                <sapan>copyright : <br /></sapan>
+                <sapan>©Multikids Baby 2020. Todos os direitos reservados. <br /></sapan>
+                <sapan><strong>www.multikidsbaby.com.br</strong> <br /></sapan>
+                <sapan> sociais@multikidsbaby</strong> <br /></sapan>
+
+            </div>
+
+            <svg version="1.1" id="Footer_curve" x="0px" y="0px" viewBox="0 0 1366 300"
+                enable-background="new 0 0 1366 300" xml:space="preserve">
+                <path class="curva"
+                    d="M0,300h1366v-57.173c-192,44.07-354.273,18.465-678.15-149.249C389.395-60.972,52,33.883,0,49.727V300z" />
+            </svg>
+
+        </footer>
+
+    </section>
+
+</body>
+
+</html>
